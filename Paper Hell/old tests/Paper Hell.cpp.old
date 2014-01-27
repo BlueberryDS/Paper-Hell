@@ -1,0 +1,103 @@
+//============================================================================
+// Name        : Paper.cpp
+// Author      : dong shi
+// Version     :
+// Copyright   : free
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+#include <ctime>
+#include <SFML/Graphics.hpp>
+#include "GUI/GuiPack.h"
+#include "GUI/Objects/ValueBar.h"
+#include "ResourceManager/ResourceManager.h"
+#include "TaskContainer/TaskFunctions.hpp"
+#include "RGBsliders.h"
+
+void testf(Sprite drawMe[100], Resource test)
+{
+    for(int i = 0;i < 100;i++){
+        drawMe[i] = test.createInstance<Sprite>();
+        drawMe[i].setPosition(200.0, 150.0);
+        drawMe[i].setSubSect(i * 3, i * 3, drawMe[i].getWidth(), drawMe[i].getHeight());
+        drawMe[i].setSize(300, 300);
+    }
+}
+
+int main() {
+	sf::RenderWindow Window(sf::VideoMode(500, 600, 32), "Paper Hell",
+			sf::Style::Close);
+	Window.Clear(sf::Color::Red);
+	bool closed = false;
+	float rot = 0;
+	Resource test = resourceManager.getResource("Resources/test.jpg");
+	Resource buttonOn = resourceManager.getResource(
+			"Resources/testButtonOn.png");
+	Resource buttonOff = resourceManager.getResource(
+			"Resources/testButtonOff.png");
+	Resource buttonSound = resourceManager.getResource(
+			"Resources/testButton.wav");
+	Resource barEmpty = resourceManager.getResource(
+			"Resources/testBarEmpty.png");
+	Resource barFull = resourceManager.getResource("Resources/testBarFull.png");
+	gui::Button testButton(buttonOn.createInstance<Sprite> (),
+			buttonOff.createInstance<Sprite> (),
+			buttonSound.createInstance<Sound> ());
+	testButton.setPosition(100, 100);
+	Sprite drawMe[100];
+	ValueBar testBar(barEmpty.createInstance<Sprite> (),
+			barFull.createInstance<Sprite> ());
+	testBar.setRange(100, 0);
+	testBar.setPosition(100, 300);
+	testBar.setValue(0);
+	testBar.setValue(0);
+	testBar.setValue(0);
+	testBar.setValue(100);
+    testf(drawMe, test);
+    DrawTypes::setDrawTarget(Window);
+	int x = 0, y = 0;
+	bool b1 = false, b2 = false;
+	//tasks
+	int sliders = tf::loadTask<RGBsliders>(std::string("RGBslider"));
+	RGBsliders * sliderSet = static_cast<RGBsliders*>(tf::getTask(sliders));
+	tf::startTask(sliders);
+	//
+	sf::Clock c;
+	for (bool draw = false; closed == false; draw = !draw, rot += 10
+			* c.GetElapsedTime()) {
+		c.Reset();
+
+		sf::Event event;
+		while (Window.GetEvent(event)) {
+			if (event.Type == sf::Event::Closed)
+			closed = true;
+		}
+		const sf::Input& input = Window.GetInput();
+		x = input.GetMouseX();
+		y = input.GetMouseY();
+		b1 = input.IsMouseButtonDown(sf::Mouse::Left);
+		b2 = input.IsMouseButtonDown(sf::Mouse::Right);
+		for (int i = 0; i < 100; i++) {
+			drawMe[i].setRotation(rot);
+			drawMe[i].setPosition(200.0, 150.0);
+			drawMe[i].changeAlpha(1);
+			drawMe[i].draw();
+		}
+		//running tasks
+		GUIModule::updateMouse(x,y,b1,b2);
+		tf::updateTask();
+		//
+		testButton.autoHandle(x, y, b1, b2);
+		testButton.draw();
+	    testBar.draw();
+		testBar.changeValue(-0.1);
+		Window.Display();
+		if (testButton.isAwake())
+			Window.Clear(sf::Color::Red);
+		else Window.Clear(sf::Color::Black);
+
+		//if(1.0f/c.GetElapsedTime()) std::cout << 1.0f/c.GetElapsedTime() << "\n";
+	}
+	return 0;
+}

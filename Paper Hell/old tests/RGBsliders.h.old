@@ -1,0 +1,24 @@
+/*
+ * RGBsliders.h
+ *
+ *  Created on: Aug 6, 2012
+ *      Author: dong
+ */
+
+#ifndef RGBSLIDERS_H_
+#define RGBSLIDERS_H_
+
+#include "TaskContainer/GUIClass.h"
+#include "GUI/GuiPack.h"
+#include "GUI/Objects/ValueBar.h"
+#include "ResourceManager/ResourceManager.h"
+
+class RGBsliders: public GUIModule {
+	Resource sliderPic;
+	gui::Slider bSlider,rSlider,gSlider;
+public:
+	RGBsliders();
+	virtual ~RGBsliders();
+};
+
+#endif /* RGBSLIDERS_H_ */

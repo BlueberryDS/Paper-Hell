@@ -1,0 +1,841 @@
+desc: (none)
+cmd: ./Paper Hell ./Paper Hell.cpp ./Paper Hell.d ./Paper Hell.o
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=11291979
+mem_heap_B=20
+mem_heap_extra_B=12
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=16383790
+mem_heap_B=199210
+mem_heap_extra_B=3302
+mem_stacks_B=0
+heap_tree=detailed
+n11: 199210 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 118791 0x4631324: ??? (in /usr/X11R6/lib/libGL.so.295.49)
+  n1: 118791 0xBEEF32A2: ???
+   n0: 118791 0x3D594549: ???
+ n1: 20864 0x47D90F7: xcb_connect_to_fd (in /usr/lib/libxcb.so.1.1.0)
+  n0: 20864 0x66AC586: ???
+ n1: 16384 0x4493D1B: XOpenDisplay (in /usr/lib/libX11.so.6.3.0)
+  n0: 16384 0x4C505F52: ???
+ n1: 14026 0x44945CD: XOpenDisplay (in /usr/lib/libX11.so.6.3.0)
+  n1: 14026 0x406BD86: sf::priv::WindowImplX11::OpenDisplay(bool) (in /usr/lib/libsfml-window.so.1.6)
+   n1: 14026 0x4064462: ??? (in /usr/lib/libsfml-window.so.1.6)
+    n1: 14026 0x400E777: call_init (in /lib/ld-2.11.3.so)
+     n1: 14026 0xBEEF32A2: ???
+      n0: 14026 0x3D594549: ???
+ n1: 8176 0x4499292: ??? (in /usr/lib/libX11.so.6.3.0)
+  n1: 8176 0x449964A: _XrmInternalStringToQuark (in /usr/lib/libX11.so.6.3.0)
+   n1: 8176 0x4499834: XrmStringToQuark (in /usr/lib/libX11.so.6.3.0)
+    n1: 8176 0x44B49C9: _XlcGetCharSet (in /usr/lib/libX11.so.6.3.0)
+     n1: 8176 0x44B45AC: _XlcAddCT (in /usr/lib/libX11.so.6.3.0)
+      n1: 8176 0x44B48B8: _XlcInitCTInfo (in /usr/lib/libX11.so.6.3.0)
+       n1: 8176 0x44BB3DB: ??? (in /usr/lib/libX11.so.6.3.0)
+        n1: 8176 0x44BA991: ??? (in /usr/lib/libX11.so.6.3.0)
+         n1: 8176 0x44BB289: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+          n1: 8176 0x44DF106: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+           n1: 8176 0x44C360A: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+            n1: 8176 0x44B2EB9: XOpenIM (in /usr/lib/libX11.so.6.3.0)
+             n1: 8176 0x4064462: ??? (in /usr/lib/libsfml-window.so.1.6)
+              n1: 8176 0x400E777: call_init (in /lib/ld-2.11.3.so)
+               n1: 8176 0xBEEF32A2: ???
+                n0: 8176 0x3D594549: ???
+ n0: 7217 in 59 places, all below massif's threshold (01.00%)
+ n1: 3840 0x449409C: XOpenDisplay (in /usr/lib/libX11.so.6.3.0)
+  n1: 3840 0x406BD86: sf::priv::WindowImplX11::OpenDisplay(bool) (in /usr/lib/libsfml-window.so.1.6)
+   n1: 3840 0x4064462: ??? (in /usr/lib/libsfml-window.so.1.6)
+    n1: 3840 0x400E777: call_init (in /lib/ld-2.11.3.so)
+     n1: 3840 0xBEEF32A2: ???
+      n0: 3840 0x3D594549: ???
+ n1: 3092 0x47D92FD: xcb_connect_to_fd (in /usr/lib/libxcb.so.1.1.0)
+  n1: 3092 0x47DC87A: xcb_connect_to_display_with_auth_info (in /usr/lib/libxcb.so.1.1.0)
+   n1: 3092 0x47DCB19: xcb_connect (in /usr/lib/libxcb.so.1.1.0)
+    n1: 3092 0x44A3EE6: _XConnectXCB (in /usr/lib/libX11.so.6.3.0)
+     n1: 3092 0x4493964: XOpenDisplay (in /usr/lib/libX11.so.6.3.0)
+      n0: 3092 0x4C505F52: ???
+ n1: 2400 0x44B4BC0: _XlcCreateDefaultCharSet (in /usr/lib/libX11.so.6.3.0)
+  n1: 2400 0x44B4845: _XlcAddCT (in /usr/lib/libX11.so.6.3.0)
+   n1: 2400 0x44B48B8: _XlcInitCTInfo (in /usr/lib/libX11.so.6.3.0)
+    n1: 2400 0x44BB3DB: ??? (in /usr/lib/libX11.so.6.3.0)
+     n1: 2400 0x44BA991: ??? (in /usr/lib/libX11.so.6.3.0)
+      n1: 2400 0x44BB289: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+       n1: 2400 0x44DF106: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+        n1: 2400 0x44C360A: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+         n1: 2400 0x44B2EB9: XOpenIM (in /usr/lib/libX11.so.6.3.0)
+          n1: 2400 0x4064462: ??? (in /usr/lib/libsfml-window.so.1.6)
+           n1: 2400 0x400E777: call_init (in /lib/ld-2.11.3.so)
+            n1: 2400 0xBEEF32A2: ???
+             n0: 2400 0x3D594549: ???
+ n1: 2372 0x4493921: XOpenDisplay (in /usr/lib/libX11.so.6.3.0)
+  n0: 2372 0x4C505F52: ???
+ n1: 2048 0x449966F: _XrmInternalStringToQuark (in /usr/lib/libX11.so.6.3.0)
+  n1: 2048 0x4499834: XrmStringToQuark (in /usr/lib/libX11.so.6.3.0)
+   n1: 2048 0x44B49C9: _XlcGetCharSet (in /usr/lib/libX11.so.6.3.0)
+    n1: 2048 0x44B45AC: _XlcAddCT (in /usr/lib/libX11.so.6.3.0)
+     n1: 2048 0x44B48B8: _XlcInitCTInfo (in /usr/lib/libX11.so.6.3.0)
+      n1: 2048 0x44BB3DB: ??? (in /usr/lib/libX11.so.6.3.0)
+       n1: 2048 0x44BA991: ??? (in /usr/lib/libX11.so.6.3.0)
+        n1: 2048 0x44BB289: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+         n1: 2048 0x44DF106: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+          n1: 2048 0x44C360A: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+           n1: 2048 0x44B2EB9: XOpenIM (in /usr/lib/libX11.so.6.3.0)
+            n1: 2048 0x4064462: ??? (in /usr/lib/libsfml-window.so.1.6)
+             n1: 2048 0x400E777: call_init (in /lib/ld-2.11.3.so)
+              n1: 2048 0xBEEF32A2: ???
+               n0: 2048 0x3D594549: ???
+#-----------
+snapshot=3
+#-----------
+time=20969009
+mem_heap_B=292667
+mem_heap_extra_B=5125
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=25710946
+mem_heap_B=292667
+mem_heap_extra_B=5125
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=30665534
+mem_heap_B=828452
+mem_heap_extra_B=6124
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=35601049
+mem_heap_B=829580
+mem_heap_extra_B=6148
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=39642142
+mem_heap_B=11062148
+mem_heap_extra_B=23988
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=1328800125
+mem_heap_B=19028261
+mem_heap_extra_B=24019
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=1752815276
+mem_heap_B=50885676
+mem_heap_extra_B=24060
+mem_stacks_B=0
+heap_tree=detailed
+n5: 50885676 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 31850497 0x10100FF: ???
+ n0: 7966098 0x8FE: ???
+ n1: 1894271 0x4631324: ??? (in /usr/X11R6/lib/libGL.so.295.49)
+  n0: 119463 in 7 places, all below massif's threshold (01.00%)
+ n0: 673144 in 315 places, all below massif's threshold (01.00%)
+ n0: 524264 0x460F4BC: ??? (in /usr/X11R6/lib/libGL.so.295.49)
+#-----------
+snapshot=10
+#-----------
+time=1752821976
+mem_heap_B=66800150
+mem_heap_extra_B=23994
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=1816525812
+mem_heap_B=66800150
+mem_heap_extra_B=23994
+mem_stacks_B=0
+heap_tree=peak
+n4: 66800150 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 31850497 0x10100FF: ???
+ n1: 31850496 0x40A4AD3: std::vector<sf::Color, std::allocator<sf::Color> >::_M_fill_insert(__gnu_cxx::__normal_iterator<sf::Color*, std::vector<sf::Color, std::allocator<sf::Color> > >, unsigned int, sf::Color const&) (in /usr/lib/libsfml-graphics.so.1.6)
+  n1: 31850496 0x40A5970: sf::priv::ImageLoader::LoadImageFromFile(std::string const&, std::vector<sf::Color, std::allocator<sf::Color> >&, unsigned int&, unsigned int&) (in /usr/lib/libsfml-graphics.so.1.6)
+   n1: 31850496 0x40A34BC: sf::Image::LoadFromFile(std::string const&) (in /usr/lib/libsfml-graphics.so.1.6)
+    n1: 31850496 0x804C293: newResource(std::string const&) (ResourceTypes.cpp:61)
+     n1: 31850496 0x804B0EA: ResourceBase::load() (ResourceManager.cpp:50)
+      n1: 31850496 0x804B018: ResourceManager::getResource(std::string) (ResourceManager.cpp:33)
+       n0: 31850496 0x804A141: main (Paper Hell.cpp:22)
+ n1: 1894271 0x4631324: ??? (in /usr/X11R6/lib/libGL.so.295.49)
+  n0: 119463 in 7 places, all below massif's threshold (01.00%)
+ n0: 1197056 in 317 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=12
+#-----------
+time=1830656232
+mem_heap_B=34949673
+mem_heap_extra_B=23991
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=1831874244
+mem_heap_B=11062148
+mem_heap_extra_B=23988
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=3121032227
+mem_heap_B=19028261
+mem_heap_extra_B=24019
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=3545045491
+mem_heap_B=42923037
+mem_heap_extra_B=24051
+mem_stacks_B=0
+heap_tree=detailed
+n5: 42923037 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 31850497 0x10100FF: ???
+ n1: 1894271 0x4631324: ??? (in /usr/X11R6/lib/libGL.so.295.49)
+  n0: 119463 in 7 places, all below massif's threshold (01.00%)
+ n0: 524264 0x460F4BC: ??? (in /usr/X11R6/lib/libGL.so.295.49)
+ n0: 504620 0x463154C: ??? (in /usr/X11R6/lib/libGL.so.295.49)
+ n0: 171983 in 318 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=16
+#-----------
+time=3608747448
+mem_heap_B=34949653
+mem_heap_extra_B=23979
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=3609917494
+mem_heap_B=11062148
+mem_heap_extra_B=23988
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=4899075477
+mem_heap_B=19028261
+mem_heap_extra_B=24019
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=5323088741
+mem_heap_B=42923037
+mem_heap_extra_B=24051
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=5386790698
+mem_heap_B=34949653
+mem_heap_extra_B=23979
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=5387960744
+mem_heap_B=11062148
+mem_heap_extra_B=23988
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=6677118727
+mem_heap_B=19028261
+mem_heap_extra_B=24019
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=7101131991
+mem_heap_B=42923037
+mem_heap_extra_B=24051
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=7164833948
+mem_heap_B=34949653
+mem_heap_extra_B=23979
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=7166003994
+mem_heap_B=11062148
+mem_heap_extra_B=23988
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=8455161977
+mem_heap_B=19028261
+mem_heap_extra_B=24019
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=8879175241
+mem_heap_B=42923037
+mem_heap_extra_B=24051
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=8942877198
+mem_heap_B=34949653
+mem_heap_extra_B=23979
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=8944047244
+mem_heap_B=11062148
+mem_heap_extra_B=23988
+mem_stacks_B=0
+heap_tree=detailed
+n5: 11062148 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 7962639 0x8FE: ???
+ n2: 1894271 0x4631324: ??? (in /usr/X11R6/lib/libGL.so.295.49)
+  n1: 118791 0xBEEF32A2: ???
+   n0: 118791 0x3D594549: ???
+  n0: 672 in 6 places, all below massif's threshold (01.00%)
+ n0: 524264 0x460F4BC: ??? (in /usr/X11R6/lib/libGL.so.295.49)
+ n0: 504620 0x463154C: ??? (in /usr/X11R6/lib/libGL.so.295.49)
+ n0: 168524 in 318 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=30
+#-----------
+time=10233205227
+mem_heap_B=19028261
+mem_heap_extra_B=24019
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=10657218491
+mem_heap_B=42923037
+mem_heap_extra_B=24051
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=10720920448
+mem_heap_B=34949653
+mem_heap_extra_B=23979
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=10722090494
+mem_heap_B=11062148
+mem_heap_extra_B=23988
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=12011248477
+mem_heap_B=19028261
+mem_heap_extra_B=24019
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=12435261741
+mem_heap_B=42923037
+mem_heap_extra_B=24051
+mem_stacks_B=0
+heap_tree=detailed
+n5: 42923037 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 31850497 0x10100FF: ???
+ n1: 1894271 0x4631324: ??? (in /usr/X11R6/lib/libGL.so.295.49)
+  n0: 119463 in 7 places, all below massif's threshold (01.00%)
+ n0: 524264 0x460F4BC: ??? (in /usr/X11R6/lib/libGL.so.295.49)
+ n0: 504620 0x463154C: ??? (in /usr/X11R6/lib/libGL.so.295.49)
+ n0: 171983 in 318 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=36
+#-----------
+time=12498963698
+mem_heap_B=34949653
+mem_heap_extra_B=23979
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=12500133744
+mem_heap_B=11062148
+mem_heap_extra_B=23988
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=13789291727
+mem_heap_B=19028261
+mem_heap_extra_B=24019
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=14213304991
+mem_heap_B=42923037
+mem_heap_extra_B=24051
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=14277006948
+mem_heap_B=34949653
+mem_heap_extra_B=23979
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=14278176994
+mem_heap_B=11062148
+mem_heap_extra_B=23988
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=15567334977
+mem_heap_B=19028261
+mem_heap_extra_B=24019
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=15991348241
+mem_heap_B=42923037
+mem_heap_extra_B=24051
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=16055050198
+mem_heap_B=34949653
+mem_heap_extra_B=23979
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=16056220244
+mem_heap_B=11062148
+mem_heap_extra_B=23988
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=17345378227
+mem_heap_B=19028261
+mem_heap_extra_B=24019
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=17769391491
+mem_heap_B=42923037
+mem_heap_extra_B=24051
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=17833093448
+mem_heap_B=34949653
+mem_heap_extra_B=23979
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=17834240199
+mem_heap_B=66802291
+mem_heap_extra_B=24037
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=17834251146
+mem_heap_B=3099045
+mem_heap_extra_B=23915
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=17834259459
+mem_heap_B=3098065
+mem_heap_extra_B=23879
+mem_stacks_B=0
+heap_tree=detailed
+n5: 3098065 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 1894271 0x4631324: ??? (in /usr/X11R6/lib/libGL.so.295.49)
+  n1: 118791 0xBEEF32A2: ???
+   n0: 118791 0x3D594549: ???
+  n0: 672 in 6 places, all below massif's threshold (01.00%)
+ n0: 524264 0x460F4BC: ??? (in /usr/X11R6/lib/libGL.so.295.49)
+ n0: 504620 0x463154C: ??? (in /usr/X11R6/lib/libGL.so.295.49)
+ n0: 134860 in 318 places, all below massif's threshold (01.00%)
+ n0: 32220 0x460D05F: ??? (in /usr/X11R6/lib/libGL.so.295.49)
+#-----------
+snapshot=52
+#-----------
+time=17834267260
+mem_heap_B=3096133
+mem_heap_extra_B=23827
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=17834318861
+mem_heap_B=3096125
+mem_heap_extra_B=23819
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=17834325586
+mem_heap_B=3102995
+mem_heap_extra_B=23813
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=17834337409
+mem_heap_B=3103907
+mem_heap_extra_B=23845
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=17834354960
+mem_heap_B=3103795
+mem_heap_extra_B=23829
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=17834364059
+mem_heap_B=2845791
+mem_heap_extra_B=22897
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=17834388483
+mem_heap_B=2835947
+mem_heap_extra_B=22157
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=17834395198
+mem_heap_B=2827779
+mem_heap_extra_B=22085
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=17834403611
+mem_heap_B=2813523
+mem_heap_extra_B=22029
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=17834411279
+mem_heap_B=2805267
+mem_heap_extra_B=21965
+mem_stacks_B=0
+heap_tree=detailed
+n5: 2805267 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 1816343 0x4631324: ??? (in /usr/X11R6/lib/libGL.so.295.49)
+  n1: 118791 0xBEEF32A2: ???
+   n0: 118791 0x3D594549: ???
+  n0: 672 in 6 places, all below massif's threshold (01.00%)
+ n0: 524264 0x460F4BC: ??? (in /usr/X11R6/lib/libGL.so.295.49)
+ n0: 291940 0x463154C: ??? (in /usr/X11R6/lib/libGL.so.295.49)
+ n0: 132670 in 318 places, all below massif's threshold (01.00%)
+ n0: 32220 0x460D05F: ??? (in /usr/X11R6/lib/libGL.so.295.49)
+#-----------
+snapshot=62
+#-----------
+time=17834418947
+mem_heap_B=2797011
+mem_heap_extra_B=21901
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=17834426615
+mem_heap_B=2788755
+mem_heap_extra_B=21837
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=17834433433
+mem_heap_B=2779755
+mem_heap_extra_B=21757
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=17834440178
+mem_heap_B=2625369
+mem_heap_extra_B=21055
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=17834448814
+mem_heap_B=2376225
+mem_heap_extra_B=20207
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=17834473222
+mem_heap_B=2366381
+mem_heap_extra_B=19467
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=17834481745
+mem_heap_B=2343737
+mem_heap_extra_B=18527
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=17834490213
+mem_heap_B=2328761
+mem_heap_extra_B=18463
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=17834497881
+mem_heap_B=2320505
+mem_heap_extra_B=18399
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=17834505549
+mem_heap_B=2312249
+mem_heap_extra_B=18335
+mem_stacks_B=0
+heap_tree=detailed
+n5: 2312249 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 1550447 0x4631324: ??? (in /usr/X11R6/lib/libGL.so.295.49)
+  n1: 118791 0xBEEF32A2: ???
+   n0: 118791 0x3D594549: ???
+  n0: 672 in 6 places, all below massif's threshold (01.00%)
+ n0: 524264 0x460F4BC: ??? (in /usr/X11R6/lib/libGL.so.295.49)
+ n0: 132670 in 318 places, all below massif's threshold (01.00%)
+ n0: 64818 0x463154C: ??? (in /usr/X11R6/lib/libGL.so.295.49)
+ n0: 32220 0x460D05F: ??? (in /usr/X11R6/lib/libGL.so.295.49)
+#-----------
+snapshot=72
+#-----------
+time=17834513217
+mem_heap_B=2303993
+mem_heap_extra_B=18271
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=17834520885
+mem_heap_B=2295737
+mem_heap_extra_B=18207
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=17834527628
+mem_heap_B=2268417
+mem_heap_extra_B=17543
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=17834534339
+mem_heap_B=2263709
+mem_heap_extra_B=16555
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=17834541163
+mem_heap_B=2103194
+mem_heap_extra_B=16214
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=17834547994
+mem_heap_B=2094793
+mem_heap_extra_B=15903
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=17834556062
+mem_heap_B=2030887
+mem_heap_extra_B=15585
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=17834563034
+mem_heap_B=2024851
+mem_heap_extra_B=15445
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=17834569942
+mem_heap_B=2005835
+mem_heap_extra_B=15253
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=17834576819
+mem_heap_B=1192841
+mem_heap_extra_B=15039
+mem_stacks_B=0
+heap_tree=detailed
+n7: 1192841 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 541648 0x4631324: ??? (in /usr/X11R6/lib/libGL.so.295.49)
+  n0: 304 in 7 places, all below massif's threshold (01.00%)
+ n0: 524264 0x460F4BC: ??? (in /usr/X11R6/lib/libGL.so.295.49)
+ n0: 44373 in 317 places, all below massif's threshold (01.00%)
+ n0: 23452 0x463154C: ??? (in /usr/X11R6/lib/libGL.so.295.49)
+ n1: 20864 0x47D90F7: xcb_connect_to_fd (in /usr/lib/libxcb.so.1.1.0)
+  n0: 20864 0x66AC586: ???
+ n1: 16384 0x4493D1B: XOpenDisplay (in /usr/lib/libX11.so.6.3.0)
+  n0: 16384 0x4C505F52: ???
+ n1: 14026 0x44945CD: XOpenDisplay (in /usr/lib/libX11.so.6.3.0)
+  n1: 14026 0x406BD86: sf::priv::WindowImplX11::OpenDisplay(bool) (in /usr/lib/libsfml-window.so.1.6)
+   n1: 14026 0x4064462: ??? (in /usr/lib/libsfml-window.so.1.6)
+    n1: 14026 0x400E777: call_init (in /lib/ld-2.11.3.so)
+     n1: 14026 0xBEEF32A2: ???
+      n0: 14026 0x3D594549: ???
+#-----------
+snapshot=82
+#-----------
+time=17834583628
+mem_heap_B=1176411
+mem_heap_extra_B=14525
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=17834590365
+mem_heap_B=640401
+mem_heap_extra_B=13855
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=17834597283
+mem_heap_B=627419
+mem_heap_extra_B=13149
+mem_stacks_B=0
+heap_tree=empty

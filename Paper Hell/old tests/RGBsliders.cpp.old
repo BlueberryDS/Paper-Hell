@@ -1,0 +1,27 @@
+/*
+ * RGBsliders.cpp
+ *
+ *  Created on: Aug 6, 2012
+ *      Author: dong
+ */
+
+#include "RGBsliders.h"
+
+RGBsliders::RGBsliders() {
+	sliderPic = resourceManager.getResource("Resources/slider.png");
+	bSlider= gui::Slider(sliderPic.createInstance<Sprite>(), 0.0f, 34.0f, 54.0f);
+    bSlider.setSize(300);
+    bSlider.setPosition(200,300);
+    bSlider.setRange(0,255);
+    GUIModule::addObject(bSlider,doNothing);
+    gSlider = bSlider;
+    gSlider.setPosition(250,300);
+    GUIModule::addObject(gSlider,doNothing);
+    rSlider = bSlider;
+    rSlider.setPosition(150,300);
+    GUIModule::addObject(rSlider,doNothing);
+}
+
+
+RGBsliders::~RGBsliders() {
+}
