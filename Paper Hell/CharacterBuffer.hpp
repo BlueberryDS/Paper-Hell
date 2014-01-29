@@ -1,6 +1,9 @@
 /*
  * CharacterBuffer.cpp
  *
+ *	Catches Characters Entered since previous check.
+ *	Defined in Main()
+ *
  *  Created on: Aug 16, 2012
  *      Author: dong
  */
@@ -11,19 +14,20 @@
 
 namespace cc{
 
-//****************
+
+const std::string & getChars();
 //getChars():
 //Returns string of chars entered
 //during the frame.
 //****************
-const std::string & getChars();
 
-//****************
+
+void setState(bool state);
 //setActive():
 //Sets the character buffering active.
 //This is so time is not wasted buffering
 //characters.
 //****************
-void setState(bool state);
+
 }
 #endif

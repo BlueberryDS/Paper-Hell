@@ -1,6 +1,8 @@
 /*
  * Design.cpp
  *
+ * Definition for Design menu
+ *
  *  Created on: Aug 16, 2012
  *      Author: dong
  */

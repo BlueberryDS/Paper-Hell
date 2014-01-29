@@ -1,6 +1,8 @@
 /*
  * Menu1.h
  *
+ * Main Menu Class
+ *
  *  Created on: Aug 13, 2012
  *      Author: dong
  */
@@ -14,7 +16,6 @@
 
 class Menu1: public GUIModule {
     ButtonSet play, title, design;
-	int fadeAlpha;
 public:
 	Menu1();
 	virtual ~Menu1(){}

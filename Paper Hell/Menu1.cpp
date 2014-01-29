@@ -9,7 +9,11 @@
 #include "TaskContainer/TaskFunctions.hpp"
 #include "Design.hpp"
 #include <string>
+
 void switchToDesign(){
+//switchToDesign():
+//Unloads current task, and loads design task.
+//****************
 	tf::stopUnload(tf::getThis());
 	tf::startTask(tf::loadTask<Design>("DesignLoad"));
 }

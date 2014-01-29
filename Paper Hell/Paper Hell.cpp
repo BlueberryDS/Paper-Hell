@@ -15,32 +15,32 @@
 #include "Menu1.h"
 #include "GameDataClasses/BulletData/BulletData.h"
 
-//=================================================
+
+namespace fr{
 //FrameRate tracker:
 //Functions for retrieving frame rate for each
 //frame in string form.
 //=================================================
-namespace fr{
 
 sf::Clock elapsed;
 
-//****************
+
+std::string floatToString(float d){
 //floatToString(float d):
 //- value to be turned to string.
 //takes a float and turns it into a string.
 //****************
-std::string floatToString(float d){
 	std::stringstream ss;
 	ss << d;
 	return ss.str();
 }
 
-//****************
+
+std::string getFrameRate(){
 //getFrameRate():
 //Returns frame rate
 //in string form.
 //****************
-std::string getFrameRate(){
 	float fps = (1.0f / elapsed.GetElapsedTime());
 	elapsed.Reset();
 	return floatToString(fps);
@@ -48,52 +48,52 @@ std::string getFrameRate(){
 
 }
 
-//=================================================
+
+namespace cc{
 //Character Buffer:
 //Stores characters entered at each frame,
 //to be accessed by modules above.
 //=================================================
-namespace cc{
 
 std::string chars;
 
 bool active = false;
 
-//****************
+const std::string & getChars(){
 //getChars():
 //Described in header.
 //****************
-const std::string & getChars(){
 	return chars;
 }
-//****************
+
+void addChar(char c){
 //addChar(char c):
 //- c is the character to be added.
 //Add chars to the char buffer.
 //****************
-void addChar(char c){
 	if (active)chars.append(1,c);
 }
 
-//****************
+
+void clearChars(){
 //clearChars():
 //Clears the char buffer.
 //To be done every frame.
 //****************
-void clearChars(){
 	chars.clear();
 }
 
-//****************
+void setState(bool state){
 //setActive():
 //Described in header.
 //****************
-void setState(bool state){
 	active = state;
 }
 
 }
 
+
+int main(){
 //=================================================
 //MAIN FUNCTION:
 //- Creates window, size and etc
@@ -102,7 +102,6 @@ void setState(bool state){
 //- Keeps Character buffer running
 //- Polls the events
 //=================================================
-int main(){
 	//set Window
 	sf::RenderWindow window;
 	window.Create(sf::VideoMode(400,800,32), "PaperHeLL - Hell in Paper", sf::Style::Close);

@@ -1,6 +1,8 @@
 /*
  * Design.hpp
  *
+ *	Loaded when Design mode is clicked.
+ *
  *  Created on: Aug 16, 2012
  *      Author: dong
  */

@@ -46,17 +46,17 @@ void changeAlpha(gui::Gui& a){
 
 bool GUIModule::start()
 {
-	changeValue=0.5;//todo smoothen this
+	changeValue=2;
 	GUIModule::applyToAll(changeAlpha);
 	GUIModule::update();
 	fadeAlpha++;
-	if (fadeAlpha< 510) return true;//todo make efficient
+	if (fadeAlpha< 250) return true;//TODO: This is a timeout. Please refractor, and place some where transparent
 	else return false;
 }
 
 bool GUIModule::stop()
 {
-	changeValue=-0.5;//todo smoothen this
+	changeValue=-2;
 	GUIModule::applyToAll(changeAlpha);
 	GUIModule::update(false);
 	fadeAlpha--;

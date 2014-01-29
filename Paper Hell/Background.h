@@ -1,6 +1,8 @@
 /*
  * Background.h
  *
+ * Task for displaying the Background
+ *
  *  Created on: Aug 12, 2012
  *      Author: dong
  */
@@ -18,29 +20,28 @@ class Background: public Task {
 
 	public:
 
-		//****************
+
+		Background() : bgPic(resourceManager.getResource("Resources/Background.jpg")){
 		//Background():
 		//- Initializes the background picture.
 		//-Sizes it.
 		//****************
-		Background() : bgPic(resourceManager.getResource("Resources/Background.jpg")){
 			bgSprite = bgPic.createInstance<Sprite>();
 			bgSprite.setSize(400, 800);//todo I dislike this, scaling is costy
 			bgSprite.setPosition(200, 400);
 		}
 
-		//****************
+		virtual void update(bool handle = true){
 		//Background():
 		//Draws the background pic.
 		//****************
-		virtual void update(bool handle = true){
 			bgSprite.draw();
 		}
 
-		//***************
+		virtual ~Background(){
 		//DUMMY DECONSTRUCTOR
 		//***************
-		virtual ~Background(){}
+		}
 };
 
 #endif /* BACKGROUND_H_ */
